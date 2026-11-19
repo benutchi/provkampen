@@ -24,9 +24,12 @@
 .scene .prop.car{width:43%;right:0;bottom:24%}
 .scene .prop.motorcycle{width:40%;right:1%;bottom:24%}
 .scene .prop.hockey{width:40%;height:auto;aspect-ratio:1;right:-1%;bottom:24%}
-.bling{position:absolute;z-index:8;background:url('bling.png?v=3') center/contain no-repeat;width:27%;height:12%;top:66%;opacity:var(--handsvisible);transition:opacity .2s;filter:drop-shadow(0 2px 2px #6c491a45)}
+
 .bling.left{left:4%;transform:rotate(25deg)}.bling.right{right:3%;transform:rotate(-25deg)}
-.scene[data-body="1"] .bling{top:64%;width:30%}.scene[data-body="1"] .bling.left{left:9%;transform:rotate(25deg)}.scene[data-body="1"] .bling.right{right:8%;transform:rotate(-25deg)}
+.scene[data-body="1"] .scene[data-body="1"] .bling.left{left:9%;transform:rotate(25deg)}.scene[data-body="1"] .bling.right{right:8%;transform:rotate(-25deg)}
 @media(max-width:650px){.scene.has-prop .character{left:-34%;height:65%;top:10%}}
 .headpart{mask-image:linear-gradient(to bottom,#000 0%,#000 24%,transparent 28%)}
 .eyespart{mask-image:linear-gradient(to bottom,transparent 26%,#000 29%,#000 34%,transparent 37%)}
+
+/* Hand accessories removed from this prototype. */
+.bling,.handspart{display:none!important}
