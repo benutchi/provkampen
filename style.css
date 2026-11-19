@@ -17,3 +17,16 @@
 .bearstatus{background:linear-gradient(transparent,#163528d9);left:0;right:0;bottom:0;padding:25px 22px 18px}.level{background:#173b2a80;padding:7px 10px;border-radius:6px}.scene .character{height:70%;top:5%}.controls #livelevel{font-size:12px;min-width:100px}.controls .loud{color:#a23c30;font-weight:750}.wardrobegrid>div{background:#f3f6ef;border-radius:12px;padding:14px}.wardrobegrid h3{margin:0 0 12px}
 @media(max-width:700px){.wardrobegrid{grid-template-columns:repeat(2,1fr)}}
 .handspart.left{clip-path:inset(60% 64% 27% 9%)}.handspart.right{clip-path:inset(60% 11% 27% 64%)}
+/* Side props share the ground with the bear instead of covering it. */
+.character{transition:left .5s ease,right .5s ease}
+.scene.has-prop .character{left:-32%;right:0;height:68%;top:7%}
+.scene .prop{width:37%;height:auto;aspect-ratio:1;right:2%;bottom:24%;filter:drop-shadow(0 10px 6px #10231d65)}
+.scene .prop.car{width:43%;right:0;bottom:24%}
+.scene .prop.motorcycle{width:40%;right:1%;bottom:24%}
+.scene .prop.hockey{width:40%;height:auto;aspect-ratio:1;right:-1%;bottom:24%}
+.bling{position:absolute;z-index:8;background:url('bling.png?v=3') center/contain no-repeat;width:27%;height:12%;top:66%;opacity:var(--handsvisible);transition:opacity .2s;filter:drop-shadow(0 2px 2px #6c491a45)}
+.bling.left{left:4%;transform:rotate(25deg)}.bling.right{right:3%;transform:rotate(-25deg)}
+.scene[data-body="1"] .bling{top:64%;width:30%}.scene[data-body="1"] .bling.left{left:9%;transform:rotate(25deg)}.scene[data-body="1"] .bling.right{right:8%;transform:rotate(-25deg)}
+@media(max-width:650px){.scene.has-prop .character{left:-34%;height:65%;top:10%}}
+.headpart{mask-image:linear-gradient(to bottom,#000 0%,#000 24%,transparent 28%)}
+.eyespart{mask-image:linear-gradient(to bottom,transparent 26%,#000 29%,#000 34%,transparent 37%)}
